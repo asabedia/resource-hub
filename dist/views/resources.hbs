@@ -1,0 +1,13 @@
+<h1>Available Resources</h1>
+{{# each resources as |val key|}}
+    <div class="resource">
+        <h3>{{val.name}}</h3>
+        <p>User: {{val.user}}</p>
+        <a href={{val.source}}>view full article</a>
+        <p>Summary: {{val.summary}}</p>
+        <h4>Tags: </h4>
+        {{# each val.tags as |v k|}}
+            <ul>{{v}}</ul>
+        {{/each}}
+    </div>    
+{{/each}}

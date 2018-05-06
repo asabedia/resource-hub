@@ -1,0 +1,33 @@
+
+<form role="form" class="pt-3" action="/resources" method="POST">
+    
+    <div class="form-group row">
+        <label for="resourceNameField" class="col-sm-2 control-label">Resource Name</label>
+        <div class= "col-sm-6">
+            <input id="resourceNameField" type ="text" class="form-control" placeholder="Resource name" name="name">
+        </div>  
+    </div> 
+
+    <div class="form-group row">
+        <label for="usernameField" class="col-sm-2 control-label">Username</label>
+        <div class= "col-sm-6">
+            <input id="usernameField" type ="text" class="form-control" placeholder="Username" name="Username">
+        </div>  
+    </div>
+
+    <div class="form-group row">
+        <label for="sourceField" class="col-sm-2 control-label">Source URL</label>
+        <div class= "col-sm-6">
+            <input id="sourceField" type ="text" class="form-control" placeholder="Source URL" name="source">
+        </div>  
+    </div>  
+
+    <div class="form-group row">
+        {{# each tags as |val key|}}
+            <div class= "tag">
+                <p>{{val.name}}</p>
+            </div>
+        {{/each}}
+    </div>
+
+</form>
